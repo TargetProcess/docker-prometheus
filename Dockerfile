@@ -1,6 +1,8 @@
 FROM prom/prometheus:v2.0.0-beta.4
 
-RUN chown -R prometheus:prometheus /etc/prometheus /prometheus
+RUN addgroup -g 1000 prometheus && \
+    adduser -s /bin/sh -S -H -u 1000 -G prometheus prometheus && \
+    chown -R prometheus:prometheus /etc/prometheus /prometheus
 
 USER prometheus
 
