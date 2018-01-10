@@ -1,4 +1,4 @@
-FROM prom/prometheus:v2.0.0-beta.5
+FROM prom/prometheus:v2.0.0
 
 USER root
 
