@@ -1,3 +1,5 @@
-FROM prom/prometheus:v2.0.0-beta.2
+FROM prom/prometheus:v2.2.0-rc.0
+
+USER root
 
 ENTRYPOINT ["/bin/prometheus", "--web.enable-lifecycle"]
